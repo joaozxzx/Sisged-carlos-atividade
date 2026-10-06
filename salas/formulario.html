@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sala - SISGED</title>
+<link rel="icon" href="data:,">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="../assets/css/style.css" rel="stylesheet">
+</head>
+<body data-base="../" data-pagina="salas-form">
+<nav class="navbar sisged-topbar px-3 no-print">
+  <a class="navbar-brand d-flex align-items-center gap-3 text-white fw-bold" href="../dashboard.html">
+    <img src="../assets/img/senai_negativa.png" alt="SENAI" height="34">
+    <img src="../assets/img/sesi_negativa.png" alt="SESI" height="34">
+    <span>SISGED</span>
+  </a>
+  <div class="d-flex align-items-center gap-3 text-white">
+    <span id="usuario-nome" class="small"></span>
+    <button type="button" id="btn-sair" class="btn btn-sm btn-outline-light">Sair</button>
+  </div>
+</nav>
+<div class="d-flex flex-column flex-md-row">
+  <aside class="sisged-sidebar no-print">
+    <nav class="nav flex-column pt-2">
+      <a class="nav-link" href="../dashboard.html">Painel</a>
+      <a class="nav-link" href="../turmas/listar.html">Turmas</a>
+      <a class="nav-link active" href="../salas/listar.html" data-perfis="coordenacao">Salas</a>
+    </nav>
+  </aside>
+  <main class="sisged-content flex-grow-1 p-4">
+    <h2 class="page-title" id="titulo">Sala</h2>
+    <div id="erro" class="alert alert-danger d-none"></div>
+    <div class="form-card" style="max-width:600px">
+      <form id="form" novalidate>
+        <div class="mb-3"><label class="form-label">Nome da sala *</label><input type="text" name="nome" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Capacidade (nº de pessoas) *</label><input type="number" min="1" name="capacidade" class="form-control" required></div>
+        <div class="mb-3"><label class="form-label">Localização</label><input type="text" name="localizacao" class="form-control" placeholder="Ex: Bloco A - 1º andar"></div>
+        <div class="mb-3"><label class="form-label">Recursos disponíveis</label><input type="text" name="recursos" class="form-control" placeholder="Ex: Projetor, ar-condicionado"></div>
+        <div class="d-flex gap-2">
+          <button type="submit" class="btn btn-primary">Salvar</button>
+          <a href="listar.html" class="btn btn-outline-secondary">Cancelar</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</div>
+<script src="../assets/js/dados.js"></script>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
